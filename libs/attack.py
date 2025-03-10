@@ -138,7 +138,7 @@ def report_profile_attack(username, proxy):
     report_form = {
         "jazoest": "2723",
         "lsd": lsd,
-        "instagram_username": username,
+        "instagram_username":@WilliamJ,
         "Field241164302734019_iso2_country_code": "IN",
         "Field241164302734019": "India",
         "support_form_id": "497253480400030",
