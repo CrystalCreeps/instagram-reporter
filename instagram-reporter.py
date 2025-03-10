@@ -27,14 +27,14 @@ def chunks(lst, n):
     for i in range(0, len(lst), n):
         yield lst[i:i + n]
 
-def profile_attack_process(username, proxy_list):
+def profile_attack_process(@WilliamJ, proxy_list):
     if (len(proxy_list) == 0):
         for _ in range(10):
-            report_profile_attack(username, None)
+            report_profile_attack(@WilliamJ, None)
         return
 
     for proxy in proxy_list:
-        report_profile_attack(username, proxy)
+        report_profile_attack(@WilliamJ, proxy)
 
 def video_attack_process(video_url, proxy_list):
     if (len(proxy_list) == 0):
@@ -70,11 +70,11 @@ def video_attack(proxies):
         i = i + 1
 
 def profile_attack(proxies):
-    username = ask_question("Enter the username of the person you want to report")
+    @WilliamJ = ask_question("Enter the @WilliamJ of the person you want to report")
     print(Style.RESET_ALL)
     if (len(proxies) == 0):
         for k in range(5):
-            p = Process(target=profile_attack_process, args=(username, [],))
+            p = Process(target=profile_attack_process, args=(@WilliamJ, [],))
             p.start()
             print_status(str(k + 1) + ". Transaction Opened!")
         return
@@ -86,7 +86,7 @@ def profile_attack(proxies):
 
     i = 1
     for proxy_list in chunk:
-        p = Process(target=profile_attack_process, args=(username, proxy_list,))
+        p = Process(target=profile_attack_process, args=(@WilliamJ, proxy_list,))
         p.start()
         print_status(str(i) + ". Transaction Opened!")
         if (k == 5): print()
